@@ -18,7 +18,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":$BUILD_NUMBER"
+          dockerImage = docker.build "ravindra502335/myweb" + ":$BUILD_NUMBER"
         }
       }
     }
@@ -27,7 +27,7 @@ pipeline {
       steps{
         script {
          docker login --username  ravindra502335 --password 'Jaya@143'
-         docker tag ravindra502335/myweb registry + ":$BUILD_NUMBER"
+         docker tag "ravindra502335/myweb" "ravindra502335/myweb" + ":$BUILD_NUMBER"
          docker push registry + ":$BUILD_NUMBER"
         }
       }
