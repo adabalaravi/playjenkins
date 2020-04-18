@@ -16,9 +16,10 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: ravindra502335/myweb:1
-        imagePullPolicy: Always         
-        name: myweb
+       - name: nginx
+        image: nginx:1.15.4
+        ports:
+        - containerPort: 80
 
 ---
 apiVersion: v1
