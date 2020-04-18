@@ -26,7 +26,7 @@ pipeline {
     stage('Push Image') {
       steps{
         script {
-         docker login --username  ravindra502335 --password Jaya@143
+         docker login --username  ravindra502335 --password 'Jaya@143'
          docker tag ravindra502335/myweb registry + ":$BUILD_NUMBER"
          docker push registry + ":$BUILD_NUMBER"
         }
