@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "192.168.1.81:5000/justme/myweb"
+    registry = "ravindra502335/myweb"
     dockerImage = ""
   }
 
@@ -26,9 +26,9 @@ pipeline {
     stage('Push Image') {
       steps{
         script {
-          docker.withRegistry( "" ) {
-            dockerImage.push()
-          }
+         docker login --username  ravindra502335 --password Jaya@143
+         docker tag ravindra502335/myweb registry + ":$BUILD_NUMBER"
+         docker push registry + ":$BUILD_NUMBER"
         }
       }
     }
