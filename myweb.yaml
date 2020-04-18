@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - image: ravindra502335/myweb:1
-        imagePullPolicy: Always
+        imagePullPolicy: Always         
         name: myweb
 
 ---
