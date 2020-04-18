@@ -28,7 +28,7 @@ metadata:
     app: myweb
   name: myweb
 spec:
-  ports:
+  ports:  
   - nodePort: 32223
     port: 80
     protocol: TCP
