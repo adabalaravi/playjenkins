@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: azurevote
-        image:  myownacr.azurecr.io/azure-vote-front:v1
+        image:  ravindra502335/azure-vote-front
         ports:
         - containerPort: 80
