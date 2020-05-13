@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: azurevote
-        image:  ravindra502335/azure-vote-front
+        image:  ravindra502335/azure-vote-front:tagname
         ports:
         - containerPort: 80
